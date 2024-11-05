@@ -1,0 +1,102 @@
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+#navbar {
+  transition: all 0.3s ease;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+#navbar .navbar-brand img#navbar-logo {
+  max-width: 100px;
+}
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 81px;
+}
+#navbar.scrolled .nav-link {
+  color: black;
+}
+#navbar #navbar-logo {
+  padding: 10px;
+}
+#navbar .navbar-nav .nav-item {
+  margin-right: 20px;
+}
+#navbar .nav-link {
+  color: #ffffff;
+  line-height: 1.8em;
+  transition: color 0.3s ease;
+}
+#navbar .nav-link.active {
+  color: #ff4b2b !important;
+}
+
+#home {
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#home span {
+  position: relative;
+}
+#home span::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #ff3b30;
+  border-radius: 2px;
+}
+#home h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-top: 90px;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  #home h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  #home h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    background-color: #fff;
+    width: 401px;
+  }
+  #navbar .navbar-toggler {
+    padding: 0.5rem;
+    margin: 1px;
+    border: none;
+  }
+  #navbar .nav-link {
+    color: #7e7e7e;
+  }
+  #home {
+    height: 300px !important;
+  }
+  #home h1 {
+    line-height: 3rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

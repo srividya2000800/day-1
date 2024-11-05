@@ -1,0 +1,140 @@
+// Variables
+$primary-color: #ff4b2b;
+$secondary-color: #ff416c;
+$white: #ffffff;
+$black: #000000;
+$dark-bg: #1a1a1a;
+$light-bg: #f8f9fa;
+$gray-text: #6c757d;
+$border-color: #e0e0e0;
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Global Styles
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+// Navbar
+#navbar {
+  @include transition;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  .navbar-brand img#navbar-logo {
+    max-width: 100px; 
+  }
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); 
+    height: 81px;
+    .nav-link {
+      color: black; 
+    }
+  }
+
+  #navbar-logo {
+    padding: 10px; 
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 20px; 
+  }
+
+  .nav-link {
+    color: $white; 
+    line-height: 1.8em;
+
+    @include transition(color);
+
+    &.active {
+      color: $primary-color !important; 
+    }
+  }
+}
+
+// Home Section
+#home {
+  background-image: url("./images/background.jpg");
+  background-size: cover; 
+  background-position: center; 
+  position: relative; 
+
+  .overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: #ff3b30;
+      border-radius: 2px;
+    }
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700; 
+    font-size: 3rem; 
+    line-height: 5rem; 
+    margin-top: 90px; 
+    z-index: 100; 
+
+    @media (min-width: 768px) {
+      font-size: 4rem; 
+
+    }
+  
+
+    @media (min-width: 992px) {
+      font-size: 5rem; 
+    }
+  }
+}
+
+// Mobile Styles
+@media (max-width: 768px) {
+  #navbar {
+    background-color: #fff; 
+    width: 401px; 
+    
+    .navbar-toggler {
+    padding: 0.5rem;
+    margin: 1px; 
+    border: none;
+    }
+    .nav-link {
+      color: #7e7e7e; 
+    }
+  }
+
+  #home {
+    height: 300px !important; 
+    h1 {
+      line-height: 3rem; 
+    }
+  }
+}

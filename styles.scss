@@ -132,9 +132,12 @@ body {
   }
 
   #home {
-    height: 300px !important; 
+    height: 383px !important; 
+    background-attachment: fixed;
+    background-size: cover;
     h1 {
-      line-height: 3rem; 
+      line-height: 2rem; 
+      font-size: 28px;
     }
   }
 }
@@ -142,4 +145,126 @@ body {
   .fixed-top{
     position: absolute !important;
   }
+}
+.mouse{
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  animation: intro 1s;
+}
+.scroll{
+  position: relative;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #fff;
+  animation: scrollDown 2s infinite;
+}
+ 
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: calc(100% - 6px); 
+  }
+}
+
+
+#services {
+  i {
+    font-weight: 700;
+   }
+  p{
+    color: #7e7e7e;
+  }
+  
+  .design:hover {
+    animation: bounce; 
+    animation-duration: 2s;
+  }
+}
+#about {
+  background-color: #1c1c1c;
+
+  img {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    color: #b5b5b5;
+    font-size: 1rem;
+  }
+
+  a.btn {
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 500;
+  }
+  .btn-danger{
+    background: linear-gradient(to right, #eb3349, #f45c43);
+  }
+}
+span {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ff3b30;
+
+  }
+}
+.steps {
+  background: rgba(30, 30, 30, .5);
+  padding: 150px;
+
+  .icon {
+    font-weight: 700;
+
+  }
+
+  .text-danger {
+    color: #ff3b30;
+  }
+  
+  }
+
+.cardcontainer {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .05);  
+  border-radius: 10px;
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, .05);
+  }
+  .child {
+    left: 0;
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    top: calc(100% + 2rem);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  &:hover {
+    .child {
+      top: 0;
+    }
+  } 
 }

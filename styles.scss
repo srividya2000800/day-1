@@ -179,7 +179,7 @@ body {
 }
 
 
-#services {
+.services {
   i {
     font-weight: 700;
    }
@@ -192,7 +192,7 @@ body {
     animation-duration: 2s;
   }
 }
-#about {
+.about {
   background-color: #1c1c1c;
 
   img {
@@ -233,7 +233,7 @@ span {
 }
 .steps {
   background: rgba(30, 30, 30, .5);
-  padding: 150px;
+  padding: 150px 0;
 
   .icon {
     font-weight: 700;
@@ -251,20 +251,55 @@ span {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .05);  
   border-radius: 10px;
+
   &:hover {
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
     border-color: rgba(255, 255, 255, .05);
   }
   .child {
     left: 0;
-    background: linear-gradient(to right, $primary-color, $secondary-color);
+    background: linear-gradient(to right, #eb3349, #f45c43);
     top: calc(100% + 2rem);
     transition: all 0.3s ease;
     height: 100%;
+  }
+  p{
+    font-size: 17px;
   }
   &:hover {
     .child {
       top: 0;
     }
   } 
+}
+#portfolio {
+  .portfolio-item {
+    overflow: hidden;
+.portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #eb3349, #f45c43);
+      opacity: 0;
+      transition: opacity 0.6s;
+    
+    }
+
+    img {
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-overlay {
+        opacity: 1;
+      }
+    }
+  }
+
 }

@@ -83,7 +83,7 @@ body {
 @media (max-width: 768px) {
   #navbar {
     background-color: #fff;
-    width: 401px;
+    width: 391px;
   }
   #navbar .navbar-toggler {
     padding: 0.5rem;
@@ -117,7 +117,6 @@ body {
   margin-left: -12px;
   border-radius: 15px;
   border: 1px solid #fff;
-  animation: intro 1s;
 }
 
 .scroll {
@@ -242,4 +241,67 @@ span::after {
 }
 #portfolio .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
+}
+
+.features {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 16px;
+}
+.feature-item .feature-number-wrapper {
+  width: 7.5rem;
+  height: 3.5rem;
+  border: 2px solid #ff4b2b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #eb3349, #f45c43);
+}
+.feature-item .feature-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff4b2b;
+  color: #ffffff;
+}
+.feature-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.feature-item p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.feature-image {
+  max-width: 389px;
+  margin: 2rem 0;
+}
+@media (min-width: 992px) {
+  .feature-image {
+    margin: 0 2rem;
+  }
+}
+
+.parallax-image {
+  background-image: url(./images/tab.jpg);
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.dream-section {
+  background-color: #ff4b2b;
 }/*# sourceMappingURL=styles.css.map */

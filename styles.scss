@@ -119,7 +119,7 @@ body {
 @media (max-width: 768px) {
   #navbar {
     background-color: #fff; 
-    width: 401px; 
+    width: 391px; 
     
     .navbar-toggler {
     padding: 0.5rem;
@@ -155,7 +155,7 @@ body {
   margin-left: -12px;
   border-radius: 15px;
   border: 1px solid #fff;
-  animation: intro 1s;
+  
 }
 .scroll{
   position: relative;
@@ -302,4 +302,69 @@ span {
     }
   }
 
+}
+.features {
+  background-color: $light-bg;
+  padding: 2rem 0;
+
+  }
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 16px;
+
+  .feature-number-wrapper {
+    width: 7.5rem;
+    height: 3.5rem;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    @include flex-center;
+        // margin-right: 1rem;
+    background: linear-gradient(to right, #eb3349, #f45c43);
+    }
+
+      .feature-number {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $primary-color;
+        color: #ffffff;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: $gray-text;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+    }
+  
+
+  .feature-image {
+    max-width: 389px;
+    margin: 2rem 0;
+
+    @media (min-width: 992px) {
+      margin: 0 2rem;
+    }
+  }
+.parallax-image{
+  background-image: url(./images/tab.jpg);
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+
+
+}
+.dream-section{
+  background-color: $primary-color;
 }

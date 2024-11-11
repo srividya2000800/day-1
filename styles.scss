@@ -25,8 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 // Navbar
 #navbar {
   @include transition;
@@ -34,32 +32,32 @@ body {
   transition: background-color 0.3s ease;
   background-color: transparent;
   .navbar-brand img#navbar-logo {
-    max-width: 100px; 
+    max-width: 100px;
   }
   &.scrolled {
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     height: 81px;
     .nav-link {
-      color: black; 
+      color: black;
     }
   }
 
   #navbar-logo {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .navbar-nav .nav-item {
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   .nav-link {
-    color: $white; 
+    color: $white;
     line-height: 1.8em;
 
     @include transition(color);
 
     &.active {
-      color: $primary-color !important; 
+      color: $primary-color !important;
     }
   }
 }
@@ -67,28 +65,26 @@ body {
 // Home Section
 #home {
   background-image: url("./images/background.jpg");
-  background-size: cover; 
-  background-position: center; 
-  position: relative; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   .overlay {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   span {
-    position: relative;
+    // position: relative;
 
     &::after {
       content: "";
-      position: absolute;
+      // position: absolute;
       bottom: -3px;
-      left: 0;
-      width: 100%;
       height: 8px;
       background-color: #ff3b30;
       border-radius: 2px;
@@ -96,57 +92,54 @@ body {
   }
 
   h1 {
-    font-family: "Poppins", sans-serif; 
-    font-weight: 700; 
-    font-size: 3rem; 
-    line-height: 5rem; 
-    margin-top: 90px; 
-    z-index: 100; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 5rem;
+    margin-top: 90px;
+    z-index: 100;
 
     @media (min-width: 768px) {
-      font-size: 4rem; 
-
+      font-size: 4rem;
     }
-  
 
     @media (min-width: 992px) {
-      font-size: 5rem; 
+      font-size: 5rem;
     }
   }
 }
 
-
 @media (max-width: 768px) {
   #navbar {
-    background-color: #fff; 
-    width: 401px; 
-    
+    background-color: #fff;
+    width: 391px;
+
     .navbar-toggler {
-    padding: 0.5rem;
-    margin: 1px; 
-    border: none;
+      padding: 0.5rem;
+      margin: 1px;
+      border: none;
     }
     .nav-link {
-      color: #7e7e7e; 
+      color: #7e7e7e;
     }
   }
 
   #home {
-    height: 383px !important; 
+    height: 383px !important;
     background-attachment: fixed;
     background-size: cover;
     h1 {
-      line-height: 2rem; 
+      line-height: 2rem;
       font-size: 28px;
     }
   }
 }
-@media screen and (max-width: 768px){
-  .fixed-top{
+@media screen and (max-width: 768px) {
+  .fixed-top {
     position: absolute !important;
   }
 }
-.mouse{
+.mouse {
   position: absolute;
   width: 22px;
   height: 42px;
@@ -155,9 +148,8 @@ body {
   margin-left: -12px;
   border-radius: 15px;
   border: 1px solid #fff;
-  animation: intro 1s;
 }
-.scroll{
+.scroll {
   position: relative;
   width: 3px;
   height: 3px;
@@ -166,7 +158,7 @@ body {
   background: #fff;
   animation: scrollDown 2s infinite;
 }
- 
+
 @keyframes scrollDown {
   0% {
     opacity: 1;
@@ -174,21 +166,20 @@ body {
   }
   100% {
     opacity: 1;
-    top: calc(100% - 6px); 
+    top: calc(100% - 6px);
   }
 }
-
 
 .services {
   i {
     font-weight: 700;
-   }
-  p{
+  }
+  p {
     color: #7e7e7e;
   }
-  
+
   .design:hover {
-    animation: bounce; 
+    animation: bounce;
     animation-duration: 2s;
   }
 }
@@ -213,7 +204,7 @@ body {
     padding: 10px 30px;
     font-weight: 500;
   }
-  .btn-danger{
+  .btn-danger {
     background: linear-gradient(to right, #eb3349, #f45c43);
   }
 }
@@ -228,33 +219,30 @@ span {
     width: 100%;
     height: 4px;
     background-color: #ff3b30;
-
   }
 }
 .steps {
-  background: rgba(30, 30, 30, .5);
+  background: rgba(30, 30, 30, 0.5);
   padding: 150px 0;
 
   .icon {
     font-weight: 700;
-
   }
 
   .text-danger {
     color: #ff3b30;
   }
-  
-  }
+}
 
 .cardcontainer {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, .05);  
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 
   &:hover {
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
-    border-color: rgba(255, 255, 255, .05);
+    border-color: rgba(255, 255, 255, 0.05);
   }
   .child {
     left: 0;
@@ -263,19 +251,32 @@ span {
     transition: all 0.3s ease;
     height: 100%;
   }
-  p{
+  p {
     font-size: 17px;
   }
   &:hover {
     .child {
       top: 0;
     }
-  } 
+  }
 }
-#portfolio {
+.portfolio-item {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: zoomIn 0.7s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.portfolio {
   .portfolio-item {
     overflow: hidden;
-.portfolio-overlay {
+    .portfolio-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -284,7 +285,6 @@ span {
       background: linear-gradient(to right, #eb3349, #f45c43);
       opacity: 0;
       transition: opacity 0.6s;
-    
     }
 
     img {
@@ -301,5 +301,185 @@ span {
       }
     }
   }
+}
+.features {
+  background-color: $light-bg;
+  padding: 2rem 0;
+}
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 16px;
 
+  .feature-number-wrapper {
+    width: 7.5rem;
+    height: 3.5rem;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    @include flex-center;
+    background: linear-gradient(to right, #eb3349, #f45c43);
+  }
+
+  .feature-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $primary-color;
+    color: #ffffff;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: $gray-text;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+.feature-image {
+  max-width: 389px;
+  margin: 2rem 0;
+
+  @media (min-width: 992px) {
+    margin: 0 2rem;
+  }
+}
+
+.dream {
+  padding: 65px;
+}
+.dream-section {
+  background-color: #ff4b2b;
+  position: relative;
+
+  .parralex-container {
+    height: 100%;
+  }
+  .parallax-image {
+    width: 100%;
+    height: 496px;
+    background-image: url(./images/tab.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 30px;
+    color: #ffd1c1;
+  }
+  button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 30px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 13px;
+    &:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .row > div {
+    height: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .parallax-image {
+    display: none;
+  }
+  .dream {
+    padding: 65px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 1.2em;
+      letter-spacing: -1px;
+      font-size: 36px !important;
+    }
+  }
+}
+.team {
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+}
+.team-member {
+  @include transition(transform);
+
+  &:hover {
+    transform: scale(1.05);
+
+    .social-icons {
+      opacity: 1;
+    }
+  }
+}
+.member-info {
+  h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p {
+    color: $primary-color;
+    font-size: 0.9rem;
+
+    &.text-red {
+      color: #ff4b2b;
+    }
+  }
+}
+
+.social-icons {
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  a {
+    @include transition(background-color);
+    text-decoration: none;
+  }
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-linkedin-in,
+.fa-google {
+  background-color: #3e5a9b;
+  width: 35px;
+  height: 35px;
+  border-radius: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-twitter {
+  background-color: #55aded;
+}
+.fa-linkedin-in {
+  background-color: #0075ad;
+}
+.fa-google {
+  background-color: #df4f37;
 }
